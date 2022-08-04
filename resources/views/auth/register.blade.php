@@ -45,7 +45,7 @@
                                 <hr>
 
                                 <div class="text-center">
-                                    <a class="small" ">
+                                    <a class="small" " href="{{asset('users/login') }}">
                                         {{ __('Already have an account? Login!') }}
                                     </a>
                                 </div>

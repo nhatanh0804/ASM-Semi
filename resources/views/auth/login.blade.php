@@ -45,10 +45,11 @@
                                         </button>
                                     </div>
 
+                                  
                                     <div class="text-center">
-                                        <a class="small"  href="">{{ __('Create an Account!') }}</a>
+                                        <a class="small"  href="{{asset('users/register') }}">{{ __('Create an Account!') }}</a>
                                     </div>
-
+                                    
                                     <hr>
 
                 
