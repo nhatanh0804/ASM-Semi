@@ -13,14 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('category', function (Blueprint $table) {
-            $table->increments('category_id');
-            $table->string('category_name');
-            $table->string('category_description');
+            Schema::create('products', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name', 255);
+            $table->string('description', 500);
+            $table->string('price');
+            $table->string('image');
+            $table->integer('category_id')->unsigned();
+            $table->foreign('category_id')->references('category_id')->on('category');
             $table->timestamps();
         });
     }
-    
 
     /**
      * Reverse the migrations.
@@ -32,5 +35,3 @@ return new class extends Migration
         //
     }
 };
-
-

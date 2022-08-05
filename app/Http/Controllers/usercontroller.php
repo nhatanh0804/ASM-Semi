@@ -37,7 +37,7 @@ class usercontroller extends Controller
 
     $user->save(); 
 
-    return redirect()->route('/listuser'); 
+    return redirect()->route('listuser.index'); 
 
 } 
 

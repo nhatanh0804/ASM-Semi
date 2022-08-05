@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\logincontroller;
 use App\Http\Controllers\usercontroller;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ProductController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,6 +36,7 @@ Route::group(['prefix' =>'category'], function(){
     Route::get('delete/{id}',[CategoryController::class,'delete']);
 });
 
+
 Route::group(['prefix' =>'listuser'], function(){
     Route::get('/',[usercontroller::class,'index'])->name('listuser.index');
     Route::get('edit/{id}',[usercontroller::class,'geteditUser']);
@@ -42,9 +44,13 @@ Route::group(['prefix' =>'listuser'], function(){
     Route::get('delete/{id}',[usercontroller::class,'delete']);
 });
 
-// Route::get('/listuser', 'App\Http\Controllers\usercontroller@getAllUser');
-// Route::get('/delete{userid}', 'App\Http\Controllers\usercontroller@delete');
-// Route::get('/edituser/{userid}', 'App\Http\Controllers\usercontroller@geteditUser');
-// Route::post('/edituser', 'App\Http\Controllers\usercontroller@posteditUser');
+Route::get('/product/index', [ProductController::class,'index'])->name('products.index');
+Route::get('/product/create', [ProductController::class,'create'])->name('products.create');    
+Route::get('/product/delete/{id}', [ProductController::class,'destroy'])->name('products.destroy');
+Route::get('/product/edit/{id}', [ProductController::class,'edit'])->name('products.edit');
+Route::post('/product/update/{id}', [ProductController::class,'update'])->name('products.update');
+Route::get('/product/show/{id}', [ProductController::class,'show'])->name('products.show');
+Route::post('/product/store', [ProductController::class,'store'])->name('products.store');
+
 
 
