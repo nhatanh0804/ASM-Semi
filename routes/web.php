@@ -59,6 +59,7 @@ Route::group(['prefix' =>'homepage'], function(){
     Route::get('shoppage',[IndexController::class,'shoppage']);
     Route::get('detail/{id}',[IndexController::class,'getDetail'])->name('detail');
     Route::post('detail/{id}',[IndexController::class,'postDetail']);
+    Route::get('contact',[IndexController::class,'contact']);
 });
 
 
