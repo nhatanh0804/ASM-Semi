@@ -34,4 +34,8 @@ class IndexController extends Controller
         $products->category_id = $request->category;
         return redirect()->route('homepage.detail');
     }
+
+    public function contact(){
+        return view('homepage.contact');
+    }
 }
