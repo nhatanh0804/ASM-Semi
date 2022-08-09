@@ -11,7 +11,7 @@ class usercontroller extends Controller
     {
 
         $user=User::all();
-        return view('listUser', compact("user"));
+        return view('listuser', compact("user"));
     }
 
     public function getAllUser(){

@@ -18,9 +18,9 @@ class logincontroller extends Controller
     {
         $arr = ['username' =>$request->username,'password' =>$request->password];
         if(Auth::attempt($arr)){
-            dd('thành công');
+            return redirect()->route('home')->with('message','Thanh cong');
         } else {
-            dd('thất bại');
+            return redirect()->route('getLogin')->with('message','That bai');
         }
     }
 

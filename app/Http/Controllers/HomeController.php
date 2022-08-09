@@ -27,10 +27,17 @@ class HomeController extends Controller
         $users = User::count();
 
         $widget = [
-            'users' => $users,
+            'user' => $user,
             //...
         ];
 
         return view('home', compact('widget'));
     }
+
+    public function home()
+    {
+        return view('home');
+    }
+
+   
 }
