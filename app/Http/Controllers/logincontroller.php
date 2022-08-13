@@ -40,6 +40,6 @@ class logincontroller extends Controller
         $user->role = $request->role;
         $user->password = Hash::make($request->password);
         $user->save();
-        return redirect()->back()->with('thanhcong','Tạo thành công');
+        return redirect()->route('home')->with('thanhcong','Tạo thành công');
     }
 }
