@@ -7,7 +7,7 @@
             <th>STT</th>
             <th>UserName</th>
             <th>Email</th>
-            <th>Chỉnh sửa</th>
+            <th>Edit</th>
         </tr>
     </thead>
     <tbody>
