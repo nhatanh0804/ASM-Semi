@@ -6,6 +6,7 @@ use App\Http\Controllers\usercontroller;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\testcartController;
 use App\Http\Controllers\IndexController;
 /*
 |--------------------------------------------------------------------------
@@ -72,3 +73,7 @@ Route::get('/product/show/{id}', [ProductController::class,'show'])->name('produ
 Route::post('/product/store', [ProductController::class,'store'])->name('products.store');
 
 
+route::get('cart',[testcartController::class,'cart']);
+route::get('add-to-cart/{id}',[testcartController::class,'addCart']);
+route::get('/update-cart/{id}',[HomeController::class,'update'])->name('update-cart');
+route::get('remove-from-cart',[HomeController::class,'remove']);
